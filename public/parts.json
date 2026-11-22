@@ -1,0 +1,622 @@
+{
+  "_comment": "Replace placeholder segment lengths with exact values from the CAD script (cad/sara_cad.py)",
+  "project": {
+    "name": "SARA",
+    "fullName": "Snake-Assisted Rescue Automaton",
+    "award": "Vishwakarma Awards 2026-27",
+    "applicationId": "VK26-AU-PAI-0062",
+    "track": "Physical AI for Resilience and Inclusion",
+    "subTheme": "AI for Disaster Resiliency",
+    "statusLabel": "Planned design, not yet built",
+    "headline": "Goes in first, so people don't have to.",
+    "oneLiner": "A small, low-cost snake robot that crawls into rubble gaps first, so rescuers get camera, heat, CO2 and sound evidence before anyone goes in.",
+    "team": ["Rahul Dev", "Ankush Kumar", "Rahul Agrawal", "Anjil Ghosh"],
+    "mentorNote": "No faculty mentor attached",
+    "githubUrl": "https://github.com/rahul-dev-cmd/SARA",
+    "renderCredit": "All renders made by the team"
+  },
+  "overall": {
+    "totalLengthMm": { "value": 707, "unit": "mm", "status": "CAD ESTIMATE", "source": "CadQuery script (cad/sara_cad.py)" },
+    "crossSectionMm": { "width": 101, "height": 101, "unit": "mm", "status": "CAD ESTIMATE", "source": "CadQuery script (cad/sara_cad.py)" },
+    "innerTubeDiameterMm": { "value": 84, "unit": "mm", "status": "CAD ESTIMATE", "source": "CadQuery script (cad/sara_cad.py)" },
+    "coreHoleDiameterMm": { "value": 12, "unit": "mm", "status": "CAD ESTIMATE", "source": "Pin sheet / CAD assembly" },
+    "petgWallThicknessMm": { "value": 4, "unit": "mm", "status": "CAD ESTIMATE", "source": "CAD rear bulkhead" },
+    "partCount": { "value": 145, "unit": "parts", "status": "CAD ESTIMATE", "source": "CadQuery collision check (0 collisions)" },
+    "massPrintedKg": { "value": 1.146, "display": "~1.15 kg (1.146 kg)", "unit": "kg", "status": "CAD ESTIMATE", "source": "CAD volume and infill estimate" },
+    "massSolidKg": { "value": 1.586, "unit": "kg", "status": "CAD ESTIMATE", "source": "CAD solid volume estimate" },
+    "speed": { "display": "Not decided yet", "note": "To be measured on the bench", "status": "PLANNED" },
+    "runtime": { "display": "Not decided yet", "note": "To be measured on the bench", "status": "PLANNED" },
+    "ipRating": { "display": "No IP rating", "note": "Body is not sealed", "status": "PLANNED" },
+    "tetherStatus": { "display": "Tether design to be decided in Stage 3", "status": "PLANNED" }
+  },
+  "dimensions": {
+    "segmentLengthsNote": "Placeholder, replace from CAD (cad/sara_cad.py)",
+    "outerDiameterMm": 84,
+    "beltOuterSpanMm": 101,
+    "noseLengthMm": 24,
+    "segments": [
+      { "id": "head", "label": "Head", "type": "head", "lengthMm": 120, "massG": 107, "massLabel": "107 g", "lengthStatus": "PLACEHOLDER", "massStatus": "CAD ESTIMATE" },
+      { "id": "joint1", "label": "Joint 1", "type": "joint", "lengthMm": 45, "massG": 65, "massLabel": "58–72 g", "lengthStatus": "PLACEHOLDER", "massStatus": "CAD ESTIMATE" },
+      { "id": "module1", "label": "Belt Module 1", "type": "module", "lengthMm": 96, "massG": 142, "massLabel": "142 g", "lengthStatus": "PLACEHOLDER", "massStatus": "CAD ESTIMATE" },
+      { "id": "joint2", "label": "Joint 2", "type": "joint", "lengthMm": 45, "massG": 65, "massLabel": "58–72 g", "lengthStatus": "PLACEHOLDER", "massStatus": "CAD ESTIMATE" },
+      { "id": "module2", "label": "Belt Module 2", "type": "module", "lengthMm": 96, "massG": 142, "massLabel": "142 g", "lengthStatus": "PLACEHOLDER", "massStatus": "CAD ESTIMATE" },
+      { "id": "joint3", "label": "Joint 3", "type": "joint", "lengthMm": 45, "massG": 65, "massLabel": "58–72 g", "lengthStatus": "PLACEHOLDER", "massStatus": "CAD ESTIMATE" },
+      { "id": "module3", "label": "Belt Module 3", "type": "module", "lengthMm": 96, "massG": 142, "massLabel": "142 g", "lengthStatus": "PLACEHOLDER", "massStatus": "CAD ESTIMATE" },
+      { "id": "joint4", "label": "Joint 4", "type": "joint", "lengthMm": 45, "massG": 65, "massLabel": "58–72 g", "lengthStatus": "PLACEHOLDER", "massStatus": "CAD ESTIMATE" },
+      { "id": "tail", "label": "Tail Bay", "type": "tail", "lengthMm": 119, "massG": 351, "massLabel": "351 g", "lengthStatus": "PLACEHOLDER", "massStatus": "CAD ESTIMATE" }
+    ]
+  },
+  "materials": {
+    "petg": {
+      "name": "Brushed Aluminium 6061 (Outer Shell)",
+      "color": "#b7c1cd",
+      "roughness": 0.28,
+      "metalness": 0.88,
+      "clearcoat": 0.12,
+      "reason": "Machined aluminium outer body shells and structural belt frames resist crushing rubble impacts while dissipating electronics heat."
+    },
+    "tpu": {
+      "name": "TPU 95A (3D Printed)",
+      "color": "#f96200",
+      "roughness": 0.68,
+      "metalness": 0.02,
+      "clearcoat": 0.04,
+      "reason": "Soft and grippy vulcanized-style elastomer for rubble traction belts, nose bumper, and pleated joint boots."
+    },
+    "al6061": {
+      "name": "Aluminium 6061-T6 (CNC Machined)",
+      "color": "#ccd4de",
+      "roughness": 0.22,
+      "metalness": 0.94,
+      "clearcoat": 0.1,
+      "reason": "CNC-machined brushed alloy for outer body clamshells, belt chassis, cardan yokes, and rear retrieval anchor."
+    },
+    "steel": {
+      "name": "Steel (Dark Machined)",
+      "color": "#3d4652",
+      "roughness": 0.34,
+      "metalness": 0.88,
+      "clearcoat": 0.05,
+      "reason": "High wear strength where joint crosses pivot, bearings roll, and pull cables route."
+    },
+    "heartbeat": {
+      "name": "Concept Enclosure (Future Patent-Track)",
+      "color": "#22d3ee",
+      "roughness": 0.28,
+      "metalness": 0.25,
+      "clearcoat": 0.4,
+      "reason": "Highlighted in cyan to distinguish future post-competition vital-sign concept."
+    }
+  },
+  "parts": [
+    {
+      "id": "head_shell",
+      "name": "Head Clamshell Housing (Aluminium)",
+      "segment": "head",
+      "category": "Mechanical",
+      "material": "Aluminium 6061 (machined brushed silver)",
+      "mass": "Part of 107 g head assembly (CAD estimate)",
+      "dimensions": "120 mm length (placeholder, replace from CAD), 84 mm dia",
+      "source": "CAD estimate",
+      "status": "CAD ESTIMATE",
+      "description": "Two-piece CNC-machined brushed aluminium split housing enclosing the Raspberry Pi Zero 2 W and head sensor suite, with recessed M2.5 stainless bolts and cooling/inspection slots."
+    },
+    {
+      "id": "nose_cap",
+      "name": "Orange TPU Nose Cap & Vent Grille",
+      "segment": "head",
+      "category": "Mechanical",
+      "material": "TPU 95A (3D printed, orange)",
+      "mass": "Part of 107 g head assembly",
+      "dimensions": "84 mm outer dia, tapered dome with vent holes",
+      "source": "CAD estimate",
+      "status": "CAD ESTIMATE",
+      "description": "Impact-absorbing soft bumper on the leading end. Holds optical windows for RGB and thermal cameras, 4 white LEDs, and airflow vent holes for the CO2 sensor."
+    },
+    {
+      "id": "pi_zero",
+      "name": "Raspberry Pi Zero 2 W",
+      "segment": "head",
+      "category": "Sensing & Compute",
+      "material": "FR4 PCB & IC components",
+      "mass": "To be measured on the bench",
+      "dimensions": "65 × 30 mm (standard board)",
+      "source": "Datasheet",
+      "status": "PLANNED",
+      "description": "Streams live video and sensor data up to the operator laptop over the tether and talks to the tail ESP32 over UART. AI runs on the laptop because the Pi Zero 2 W is too small."
+    },
+    {
+      "id": "ov5647_cam",
+      "name": "OV5647 RGB Camera (CSI)",
+      "segment": "head",
+      "category": "Sensing & Compute",
+      "material": "Optical lens & PCB module",
+      "mass": "To be measured on the bench",
+      "dimensions": "25 × 24 mm module",
+      "source": "Datasheet",
+      "status": "PLANNED",
+      "description": "Forward-facing visible-light camera connected to the Pi CSI ribbon port so operators can inspect dark rubble pockets illuminated by the nose LEDs."
+    },
+    {
+      "id": "mlx90640_thermal",
+      "name": "MLX90640 Thermal Camera (I2C)",
+      "segment": "head",
+      "category": "Sensing & Compute",
+      "material": "IR lens & breakout PCB",
+      "mass": "To be measured on the bench",
+      "dimensions": "I2C address 0x33, 3.3 V logic",
+      "source": "Datasheet",
+      "status": "PLANNED",
+      "description": "Detects body heat signatures in complete darkness or heavy dust where normal cameras struggle."
+    },
+    {
+      "id": "mhz19b_co2",
+      "name": "MH-Z19B CO2 Sensor (PWM)",
+      "segment": "head",
+      "category": "Sensing & Compute",
+      "material": "NDIR optical chamber",
+      "mass": "To be measured on the bench",
+      "dimensions": "33 × 20 × 9 mm module",
+      "source": "Datasheet",
+      "status": "PLANNED",
+      "description": "Measures elevated carbon dioxide concentration behind the nose vent holes as secondary evidence of human breathing in confined cavities."
+    },
+    {
+      "id": "inmp441_mic",
+      "name": "INMP441 Digital Microphone (I2S)",
+      "segment": "head",
+      "category": "Sensing & Compute",
+      "material": "MEMS sensor breakout",
+      "mass": "To be measured on the bench",
+      "dimensions": "14 mm dia breakout",
+      "source": "Datasheet",
+      "status": "PLANNED",
+      "description": "Captures faint voices, knocking, or breathing sounds inside rubble voids via I2S digital audio to the Pi Zero 2 W."
+    },
+    {
+      "id": "head_leds",
+      "name": "4× Nose LEDs + MOSFET Driver",
+      "segment": "head",
+      "category": "Sensing & Compute",
+      "material": "High-brightness LEDs & logic-level MOSFET",
+      "mass": "To be measured on the bench",
+      "dimensions": "4× 5 mm LEDs, 100 Ω resistors, 5 V rail (~0.08 A)",
+      "source": "Datasheet",
+      "status": "PLANNED",
+      "description": "Lights up dark gaps ahead of the camera and blinks automatically as a visual warning if the ESP32 watchdog trips."
+    },
+    {
+      "id": "heartbeat_module",
+      "name": "Heartbeat (Vital Sign) Sensor Module",
+      "segment": "head",
+      "category": "Future Patent-Track",
+      "material": "Concept housing (cyan accent)",
+      "mass": "To be decided and tested",
+      "dimensions": "Sensor type, range and accuracy: to be decided and tested",
+      "source": "Concept only — not in current BOM",
+      "status": "CONCEPT",
+      "isHeartbeat": true,
+      "description": "CONCEPT, not in current build. Future non-contact sensor planned after the competition to detect a human heartbeat from a distance so rescuers can prioritise confirmed living survivors. Absence of a reading is always shown as 'NO VITAL SIGN DETECTED, UNCONFIRMED' — never 'dead'."
+    },
+    {
+      "id": "cardan_yoke",
+      "name": "Machined Aluminium 6061 Cardan Yokes (×8)",
+      "segment": "joint1",
+      "category": "Mechanical",
+      "material": "Aluminium 6061 (CNC machined, brushed silver)",
+      "mass": "Part of 58–72 g per joint",
+      "dimensions": "2 yokes per joint across 4 joints (45 mm joint length placeholder)",
+      "source": "CAD estimate",
+      "status": "CAD ESTIMATE",
+      "description": "Two orthogonal aluminium clevis yokes form each universal joint, delivering high bending stiffness at the pivot points without excess weight. FEA planned next."
+    },
+    {
+      "id": "steel_cross_bearings",
+      "name": "Steel Cross & 16 Small Bearings",
+      "segment": "joint2",
+      "category": "Mechanical",
+      "material": "Steel (dark machined metal)",
+      "mass": "Part of 58–72 g per joint",
+      "dimensions": "1 steel cross + 4 small bearings per joint (16 bearings total)",
+      "source": "CAD estimate",
+      "status": "CAD ESTIMATE",
+      "description": "Allows smooth 2-axis pitch and yaw articulation under cable tension while resisting torsional twisting as the belt modules push through rubble."
+    },
+    {
+      "id": "joint_sleeve",
+      "name": "TPU 95A Flexible Joint Sleeves (×4)",
+      "segment": "joint1",
+      "category": "Mechanical",
+      "material": "TPU 95A (3D printed, orange)",
+      "mass": "Part of 58–72 g per joint",
+      "dimensions": "45 mm length (placeholder, replace from CAD), ~84 mm outer dia",
+      "source": "CAD estimate",
+      "status": "CAD ESTIMATE",
+      "description": "Soft elastomeric shroud covering each cardan joint to deflect loose gravel and dust while flexing freely during bends. Note: body is not sealed (no IP rating)."
+    },
+    {
+      "id": "steel_cables",
+      "name": "4 Steel Control Cables per Joint",
+      "segment": "joint2",
+      "category": "Mechanical",
+      "material": "Braided steel wire",
+      "mass": "Part of mechanical assembly",
+      "dimensions": "4 cables per joint routed axially to tail servos",
+      "source": "CAD estimate",
+      "status": "PLANNED",
+      "description": "Four cables run in orthogonal quadrants from the tail MG90S servos to each cardan joint. Pulling one side bends the joint in that direction; 4 cables share load for redundancy."
+    },
+    {
+      "id": "belt_module_core",
+      "name": "Belt Module Aluminium Chassis & Drums (×3)",
+      "segment": "module1",
+      "category": "Drive",
+      "material": "Aluminium 6061 (machined brushed frame & toothed rollers)",
+      "mass": "142 g per complete module (×3)",
+      "dimensions": "96 mm length (placeholder, replace from CAD), 84 mm inner frame",
+      "source": "CAD estimate",
+      "status": "CAD ESTIMATE",
+      "description": "Open-frame CNC-machined aluminium chassis holding 4 orthogonal belt tracks, toothed drive rollers, and 4 exposed N20 gear motor mounts around the 12 mm central wiring tunnel."
+    },
+    {
+      "id": "tpu_belts",
+      "name": "Treaded TPU 95A Drive Belts (×12)",
+      "segment": "module2",
+      "category": "Drive",
+      "material": "TPU 95A (3D printed, orange, treaded)",
+      "mass": "Part of 142 g per belt module",
+      "dimensions": "4 belts per module (top, bottom, left, right), 101 × 101 mm outer span",
+      "source": "CAD estimate",
+      "status": "CAD ESTIMATE",
+      "description": "All-around traction tracks ensure SARA keeps moving even if it rolls sideways or presses against overhead rubble inside tight cavities."
+    },
+    {
+      "id": "n20_motors",
+      "name": "12× N20 Metal-Gear Motors",
+      "segment": "module2",
+      "category": "Drive",
+      "material": "Steel motor can, brass spur gearbox & steel D-shaft",
+      "mass": "Part of 142 g per belt module",
+      "dimensions": "4 per belt module; 12 V-rated run on 7.4 V rail (~0.1–0.2 A moving)",
+      "source": "Datasheet (stall current unknown)",
+      "status": "PLANNED",
+      "description": "Compact brass-gearbox DC motors seated directly in each aluminium module bay, driving all 12 toothed belt rollers via 6 TB6612FNG dual drivers. Running 12 V motors on 7.4 V lowers speed and torque — bench test planned in Dec 2026."
+    },
+    {
+      "id": "wiring_harness",
+      "name": "Internal Wiring Harness & Rear Tether",
+      "segment": "module1",
+      "category": "Wiring",
+      "material": "Silicone-insulated multi-conductor loom, FFC ribbon & JST leads",
+      "mass": "Part of electrical harness",
+      "dimensions": "12 mm core tunnel: 5 V/GND, UART, CO2 PWM, 24 N20 motor wires, 8 servo leads + tether",
+      "source": "Pin sheet / KiCad ERC passed",
+      "status": "PLANNED",
+      "description": "Color-coded silicone wire bundle routed through every cardan joint bore from Head Pi & sensors to Tail ESP32, 6 TB6612FNG drivers, and 8 MG90S servos, plus rear USB-Ethernet tether (Stage 3 TBD)."
+    },
+    {
+      "id": "tail_shell",
+      "name": "Tail Bay Clamshell Housing (Aluminium)",
+      "segment": "tail",
+      "category": "Mechanical",
+      "material": "Aluminium 6061 (machined brushed silver)",
+      "mass": "Part of 351 g tail bay (heaviest segment)",
+      "dimensions": "119 mm length (placeholder, replace from CAD), 84 mm dia",
+      "source": "CAD estimate",
+      "status": "CAD ESTIMATE",
+      "description": "Machined brushed aluminium split shell enclosing the 2S Li-ion battery pack, ESP32 watchdog, 8 cable servos, and all 6 motor drivers, with rear bulkhead grommet for the tether and M6 retrieval eyebolt."
+    },
+    {
+      "id": "esp32_devkit",
+      "name": "ESP32 DevKit + 2× MCP23017 Expanders",
+      "segment": "tail",
+      "category": "Control",
+      "material": "FR4 PCB & RF shielded module",
+      "mass": "Part of 351 g tail bay",
+      "dimensions": "12 motor PWMs, I2C, UART2, MOTOR_EN watchdog, 2× NTC ADC",
+      "source": "Pin sheet / KiCad ERC passed",
+      "status": "PLANNED",
+      "description": "Runs low-level motion control and the independent safety watchdog. If commands go quiet for ~0.5 s, ESP32 cuts MOTOR_EN even if the Pi Zero 2 W hangs."
+    },
+    {
+      "id": "servos_pca9685",
+      "name": "8× MG90S Servos + PCA9685 Driver",
+      "segment": "tail",
+      "category": "Drive",
+      "material": "Metal-gear micro servos & I2C PWM PCB",
+      "mass": "Part of 351 g tail bay",
+      "dimensions": "6 V rail (5 A buck); worst-case all-stall ~5.6 A",
+      "source": "Datasheet (not measured)",
+      "status": "PLANNED",
+      "description": "Pulls the steel joint tendons to steer SARA's 4 cardan joints. Firmware limits simultaneous servo motion to stay inside the 5 A buck converter budget."
+    },
+    {
+      "id": "motor_drivers",
+      "name": "6× TB6612FNG Dual Motor Drivers",
+      "segment": "tail",
+      "category": "Drive",
+      "material": "Surface-mount H-bridge breakout PCBs",
+      "mass": "Part of 351 g tail bay",
+      "dimensions": "12 independent belt outputs, thermal shutdown built in",
+      "source": "Datasheet",
+      "status": "PLANNED",
+      "description": "Drives all 12 N20 belt motors from the 7.4 V rail using 12 ESP32 PWM pins and 24 direction pins from the two MCP23017 I/O expanders."
+    },
+    {
+      "id": "battery_power",
+      "name": "2× 18650 Battery Pack + BMS + Dual Bucks",
+      "segment": "tail",
+      "category": "Power",
+      "material": "2S Li-ion cells, 2S BMS, 10 A fuse, 5 V 3 A & 6 V 5 A bucks",
+      "mass": "Major share of 351 g tail bay",
+      "dimensions": "7.4 V nominal (6.0–8.4 V), 2× NTC temperature probes",
+      "source": "Datasheet (runtime not decided yet)",
+      "status": "PLANNED",
+      "description": "Supplies 7.4 V to belt motors, regulated 5 V (3 A) to compute/sensors, and regulated 6 V (5 A) to steering servos, protected by a 2S BMS, 10 A fuse, and main switch."
+    },
+    {
+      "id": "retrieval_anchor",
+      "name": "Aluminium M6 Eyebolt & Dyneema Line",
+      "segment": "tail",
+      "category": "Recovery & Link",
+      "material": "Aluminium M6 eyebolt + internal backing plate + Dyneema line",
+      "mass": "Part of 351 g tail bay",
+      "dimensions": "M6 threaded anchor through 4 mm printed PETG rear wall",
+      "source": "CAD estimate (pull test planned)",
+      "status": "PLANNED",
+      "description": "Purely mechanical fail-safe recovery point. Even if battery power or communications die completely inside rubble, rescuers reel SARA back out by hand."
+    }
+  ],
+  "bom": {
+    "currency": "INR",
+    "symbol": "₹",
+    "honestNote": "These are our own estimates, not vendor quotes, and lead times are not confirmed yet.",
+    "heartbeatNote": "Heartbeat (vital sign) sensor module is a future patent-track concept and is NOT included in this bill of materials.",
+    "contingencyPercent": 10,
+    "groups": [
+      {
+        "group": "Sensing and compute",
+        "items": "Pi Zero 2 W, OV5647 camera, MLX90640 thermal, MH-Z19B CO2, INMP441 mic, LEDs",
+        "source": "Online store in India",
+        "costInr": 11250,
+        "status": "PLANNED"
+      },
+      {
+        "group": "Control",
+        "items": "ESP32 DevKit, PCA9685, 2 × MCP23017",
+        "source": "Local or online",
+        "costInr": 1150,
+        "status": "PLANNED"
+      },
+      {
+        "group": "Drive",
+        "items": "12 × N20 motor, 6 × TB6612FNG, 8 × MG90S servo",
+        "source": "Local or online",
+        "costInr": 5500,
+        "status": "PLANNED"
+      },
+      {
+        "group": "Power",
+        "items": "2 × 18650, 2S BMS, fuse, switch, 2 bucks, charger, NTC",
+        "source": "Local or online",
+        "costInr": 1910,
+        "status": "PLANNED"
+      },
+      {
+        "group": "Wiring",
+        "items": "Wire, connectors, heat-shrink",
+        "source": "Local",
+        "costInr": 700,
+        "status": "PLANNED"
+      },
+      {
+        "group": "Mechanical",
+        "items": "PETG 1 kg, TPU 0.5 kg, 8 Al6061 yokes, 16 bearings, cable, screws",
+        "source": "Filament online, yokes at a machine shop",
+        "costInr": 9420,
+        "status": "PLANNED"
+      },
+      {
+        "group": "Recovery and link",
+        "items": "Dyneema line and reel, M6 eyebolt, tether cable, USB-Ethernet",
+        "source": "Local or online",
+        "costInr": 3100,
+        "status": "PLANNED"
+      }
+    ]
+  },
+  "currentBudget": [
+    {
+      "rail": "5 V rail",
+      "converter": "3 A buck converter",
+      "typicalRange": "0.7 – 1.5 A",
+      "limitA": 3.0,
+      "estimatedPeakA": 1.5,
+      "breakdown": "Pi Zero 2 W (~0.3–1.0 A), ESP32 (~0.1–0.25 A), MH-Z19B CO2 peak (~0.15 A), 4 LEDs (~0.08 A)",
+      "assessment": "Fits comfortably within 3 A buck limit",
+      "riskLevel": "nominal",
+      "status": "PLANNED"
+    },
+    {
+      "rail": "6 V rail",
+      "converter": "5 A buck converter",
+      "typicalRange": "Up to ~5.6 A if all 8 servos stall",
+      "limitA": 5.0,
+      "estimatedPeakA": 5.6,
+      "breakdown": "8 × MG90S servos (~0.7 A stall each = ~5.6 A worst case)",
+      "assessment": "Known risk: exceeds 5 A buck if all stall together. Firmware limits how many servos move at once.",
+      "riskLevel": "warning",
+      "status": "PLANNED"
+    },
+    {
+      "rail": "7.4 V rail (motors)",
+      "converter": "2S pack + 10 A BMS & 10 A fuse",
+      "typicalRange": "1.2 – 2.4 A moving (stall unknown)",
+      "limitA": 10.0,
+      "estimatedPeakA": 2.4,
+      "breakdown": "12 × N20 motors (~0.1–0.2 A each moving; stall current unknown — to be measured on bench)",
+      "assessment": "Soft-start, ramped PWM, limit simultaneous drive, measure stall current on bench.",
+      "riskLevel": "caution",
+      "status": "PLANNED"
+    }
+  ],
+  "pinMap": {
+    "esp32": [
+      { "func": "I2C SDA / SCL", "gpio": "GPIO21 / 22", "connectsTo": "PCA9685, 2× MCP23017 (0x20, 0x21)" },
+      { "func": "UART2 RX / TX", "gpio": "GPIO16 / 17", "connectsTo": "Pi Zero 2 W TXD/RXD (GPIO14/15)" },
+      { "func": "MOTOR_EN", "gpio": "GPIO27", "connectsTo": "STBY of all 6 TB6612FNG (10 kΩ pull-down: off at boot)" },
+      { "func": "CO2 PWM input", "gpio": "GPIO34", "connectsTo": "MH-Z19B PWM output" },
+      { "func": "Battery NTC ×2", "gpio": "GPIO35, 36", "connectsTo": "10 kΩ + NTC divider to ADC" },
+      { "func": "12 Motor PWM", "gpio": "GPIO 4, 5, 13, 14, 15, 18, 19, 23, 25, 26, 32, 33", "connectsTo": "TB6612FNG PWMA / PWMB channels" }
+    ],
+    "piZero": [
+      { "pin": "Pin 2 (5 V), 6 (GND)", "connectsTo": "5 V buck (via fuse), common GND" },
+      { "pin": "CSI port", "connectsTo": "OV5647 RGB camera ribbon" },
+      { "pin": "GPIO2 SDA / GPIO3 SCL", "connectsTo": "MLX90640 thermal camera (I2C 0x33, 3.3 V)" },
+      { "pin": "GPIO18 / 19 / 20", "connectsTo": "INMP441 I2S microphone (SCK / WS / SD)" },
+      { "pin": "GPIO14 TXD / 15 RXD", "connectsTo": "ESP32 UART2 (3.3 V logic, common GND)" },
+      { "pin": "GPIO12 (Pin 32)", "connectsTo": "Logic-level MOSFET gate → 4× LEDs (100 Ω each, 5 V)" },
+      { "pin": "USB OTG port", "connectsTo": "USB-Ethernet tether (design to be decided in Stage 3)" }
+    ],
+    "note": "Avoided ESP32 boot pins GPIO0, 2, 12. GPIO5 and 15 are boot-strapping pins (verify at bring-up). KiCad block-level schematic passes ERC (0 errors, 0 warnings); PCB/DRC not done yet."
+  },
+  "userJourney": {
+    "before": [
+      "Team reaches the collapsed building",
+      "Dark gaps — no idea who is inside",
+      "A rescuer has to crawl in and look",
+      "Every gap gets the same risk and the same time",
+      "Rubble can shift while the person is inside"
+    ],
+    "after": [
+      "Operator sends SARA into the gap first",
+      "Live camera plus heat, CO2 and sound readings come back",
+      "AI marks useful frames; laptop shows an evidence score",
+      "Operator sends SARA back to the strongest spot to confirm",
+      "Rescuers go in knowing where to look first"
+    ],
+    "honestNote": "Time saved and risk reduced will be measured on our rubble test course in Stage 3. We do not quote invented percentages."
+  },
+  "safety": {
+    "statusNote": "All fail-safes below are PLANNED and UNTESTED. No IP rating (body is not sealed). Standards IEC 62133 and ISO 12100 are considered as guidance only — no certification claimed.",
+    "rows": [
+      {
+        "failureMode": "Data link down over 0.5 s",
+        "hazard": "SARA stuck or moving blind in rubble",
+        "failsafe": "ESP32 watchdog cuts MOTOR_EN, nose LEDs blink, operator reels SARA back with the retrieval line",
+        "status": "PLANNED"
+      },
+      {
+        "failureMode": "All power fails",
+        "hazard": "No control, no video",
+        "failsafe": "Purely mechanical Dyneema retrieval line on M6 eyebolt lets rescuers reel SARA out by hand",
+        "status": "PLANNED"
+      },
+      {
+        "failureMode": "Retrieval anchor stress",
+        "hazard": "Anchor pulls out of rear shell",
+        "failsafe": "Aluminium M6 eyebolt with internal backing plate on 4 mm PETG wall; real pull test planned",
+        "status": "PLANNED"
+      },
+      {
+        "failureMode": "Battery overheating or short",
+        "hazard": "Cell damage or fire",
+        "failsafe": "2S BMS, 10 A inline fuse, main switch, and 2 NTC sensors read by ESP32 (cutoff set in bench tests)",
+        "status": "PLANNED"
+      },
+      {
+        "failureMode": "Belt jam or motor stall",
+        "hazard": "Driver overheating",
+        "failsafe": "TB6612FNG thermal shutdown plus timed drive commands and ramped PWM",
+        "status": "PLANNED"
+      },
+      {
+        "failureMode": "Control cable breaks or slacks",
+        "hazard": "Joint loses steering stiffness",
+        "failsafe": "4 steel cables per joint share the load; body can still be pulled out mechanically",
+        "status": "PLANNED"
+      }
+    ],
+    "physicalFailsafes": [
+      "Hand-pulled Dyneema retrieval line on M6 aluminium eyebolt",
+      "2S BMS, 10 A fuse, and physical main power switch",
+      "STOP button on the operator browser dashboard",
+      "Hardware-independent ESP32 0.5 s safety watchdog"
+    ]
+  },
+  "risks": [
+    {
+      "risk": "Servo power overshoot",
+      "detail": "8 MG90S servos can draw ~5.6 A if all stall together against a 5 A 6 V buck.",
+      "backup": "Firmware limits how many servos move simultaneously; swap to higher-current buck if bench tests require it.",
+      "status": "PLANNED"
+    },
+    {
+      "risk": "Weak belt motors",
+      "detail": "12 V-rated N20 motors running on 7.4 V produce lower speed and torque; stall current is unknown.",
+      "backup": "Bench test one complete belt module first in Dec 2026; upgrade to higher-torque gear ratio or higher-voltage pack if needed.",
+      "status": "PLANNED"
+    },
+    {
+      "risk": "Almost no spare ESP32 pins",
+      "detail": "12 motor PWMs, I2C, UART, MOTOR_EN, CO2 PWM, and 2 NTCs nearly exhaust GPIO.",
+      "backup": "2× MCP23017 I2C I/O expanders already added for all 24 direction pins; can daisy-chain another expander if needed.",
+      "status": "PLANNED"
+    },
+    {
+      "risk": "Cable tension drift or slack",
+      "detail": "4 steel tendons per joint must stay balanced or bending feels sloppy or binds.",
+      "backup": "Tune tensioners on the bench before rubble trials; 4 cables per joint share mechanical load.",
+      "status": "PLANNED"
+    },
+    {
+      "risk": "Retrieval anchor on 4 mm printed PETG wall",
+      "detail": "Pull force passes through a 4 mm 3D-printed rear wall; strength is untested and FEA is not done yet.",
+      "backup": "Run FEA and a physical pull test; stronger backup ties the eyebolt directly to the last aluminium joint yoke with a steel cable.",
+      "status": "PLANNED"
+    },
+    {
+      "risk": "Tether design still open",
+      "detail": "USB-Ethernet cable stiffness, length, and snag resistance inside debris are not finalized.",
+      "backup": "Evaluate flexible tether options in Stage 3; watchdog stops motors and mechanical line recovers SARA if link drops.",
+      "status": "PLANNED"
+    },
+    {
+      "risk": "AI false alarms in dark or dusty scenes",
+      "detail": "Dust clouds, warm debris, or occlusions can trigger noisy camera or thermal detections.",
+      "backup": "Fuse camera, thermal, CO2, and audio into one evidence score and always keep the human operator as final decision maker.",
+      "status": "PLANNED"
+    }
+  ],
+  "roadmap": [
+    {
+      "month": "Month 1",
+      "date": "Nov 2026",
+      "title": "Procure, Print & Machine",
+      "tasks": "Order electronics and hardware, 3D-print PETG shells and TPU belts/sleeves, machine the 8 Aluminium 6061 cardan yokes.",
+      "status": "PLANNED"
+    },
+    {
+      "month": "Month 2",
+      "date": "Dec 2026",
+      "title": "Single-Module Bench Test",
+      "tasks": "Assemble one belt module and one cardan joint. Bench test N20 motors, MG90S servos, and cable bending. Measure real current draw.",
+      "status": "PLANNED"
+    },
+    {
+      "month": "Month 3",
+      "date": "Jan 2027",
+      "title": "Full Integration, Firmware & FEA",
+      "tasks": "Wire all segments, write ESP32 watchdog firmware, Pi video server, operator dashboard, laptop AI detection, finalize KiCad and run FEA.",
+      "status": "PLANNED"
+    },
+    {
+      "month": "Month 4",
+      "date": "Feb 2027",
+      "title": "Rubble Course & Pull Test",
+      "tasks": "Build a rubble test course, run the rear-anchor pull test, tune motion and evidence scoring, and rehearse the live Stage 3 demo.",
+      "status": "PLANNED"
+    }
+  ],
+  "stage3Target": "A working, remotely controlled SARA that crawls and bends through our rubble test course, streams live video and sensor readings, and shows an evidence score on the laptop."
+}
